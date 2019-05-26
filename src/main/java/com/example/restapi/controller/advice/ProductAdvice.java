@@ -1,6 +1,6 @@
-package com.example.restapi.restapi.controller.advice;
+package com.example.restapi.controller.advice;
 
-import com.example.restapi.restapi.dto.MessageDto;
+import com.example.restapi.dto.MessageDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;

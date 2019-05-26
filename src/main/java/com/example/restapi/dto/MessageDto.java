@@ -1,4 +1,4 @@
-package com.example.restapi.restapi.dto;
+package com.example.restapi.dto;
 
 public class MessageDto {
     private String message;

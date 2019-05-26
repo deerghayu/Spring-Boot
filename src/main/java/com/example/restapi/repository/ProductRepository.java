@@ -1,11 +1,9 @@
-package com.example.restapi.restapi.repository;
+package com.example.restapi.repository;
 
 
-import com.example.restapi.restapi.model.Product;
+import com.example.restapi.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, String> {

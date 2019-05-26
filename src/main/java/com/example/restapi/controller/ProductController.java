@@ -1,7 +1,7 @@
-package com.example.restapi.restapi.controller;
+package com.example.restapi.controller;
 
-import com.example.restapi.restapi.model.Product;
-import com.example.restapi.restapi.repository.ProductRepository;
+import com.example.restapi.model.Product;
+import com.example.restapi.repository.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,20 +31,17 @@ public class ProductController {
 
     @RequestMapping(path = "{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
     public Product updateProduct(@RequestBody Product product, @PathVariable(name = "id") String id) {
-
         Product foundProduct = productRepository.getOne(id);
-        if (foundProduct != null) {
+       // if (foundProduct != null) {
             foundProduct.setName(product.getName());
             foundProduct.setCategory(product.getCategory());
             foundProduct.setDescription(product.getDescription());
             productRepository.save(foundProduct);
             return foundProduct;
-        } else {
+       /* } else {
             logger.info("No product found with given id");
             return product;
-        }
-
-
+        }*/
     }
 
     @RequestMapping(path = "{id}", method = RequestMethod.DELETE)
@@ -53,6 +50,5 @@ public class ProductController {
         if (product != null) {
             productRepository.delete(product);
         }
-
     }
 }

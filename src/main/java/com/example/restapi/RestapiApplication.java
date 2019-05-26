@@ -1,7 +1,7 @@
-package com.example.restapi.restapi;
+package com.example.restapi;
 
-import com.example.restapi.restapi.model.Product;
-import com.example.restapi.restapi.repository.ProductRepository;
+import com.example.restapi.model.Product;
+import com.example.restapi.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
